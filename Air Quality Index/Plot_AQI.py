@@ -1,6 +1,7 @@
 import pandas as pd 
 import matplotlib.pyplot as plt
 
+
 def avg_data(Year):
     
     temp_i=0
@@ -36,6 +37,15 @@ if __name__=="__main__":
    #storing records     
     lst_2013=avg_data(2013)
     lst_2014=avg_data(2014)
-    lst_2017=avg_data(2015)
-    lst_2018=avg_data(2016)
-    lst_2019=avg_data(2017)
+    lst_2015=avg_data(2015)
+    lst_2016=avg_data(2016)
+    lst_2017=avg_data(2017)
+    lst_2018=avg_data(2018)
+    
+    plt.plot(range(0,365),lst_2013,label="2013 data")
+    plt.plot(range(0,364),lst_2014,label="2014 data")
+
+    plt.xlabel('Day')
+    plt.ylabel('PM 2.5')
+    plt.legend(loc='upper right')
+    plt.show()
