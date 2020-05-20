@@ -105,21 +105,22 @@ if __name__=="__main__":
                 if flag<2:
                     wr.writerow(row)
                 
+    
                 
     total_data=[]
     for year in range(2013,2017):
-        df=pd.read_csv(cpath+'/real_'+str(year)+'.csv','rb')
+        df=pd.read_csv(cpath+'/real_'+str(year)+'.csv')
         total_data=total_data+df.values.tolist()
         
-    
+
     with open(cpath+'/Real_Combine.csv','w') as  csvfile:
          wr=csv.writer(csvfile,dialect='excel')
          wr.writerow(['T','TM','Tm','H','VV','V','VM','PM 2.5'])
          wr.writerows(total_data)
-
+ 
         
     
-  
+    df=pd.read_csv('Data/Real-Data/Real_Combine.csv')
         
         
     
