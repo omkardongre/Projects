@@ -24,7 +24,7 @@ def point_line_distance(start,end, point):
         return num/denom
 
         
-#we dont have refrence concept to store inresultanat arraay in python, so we return list,     
+#we dont have refrence concept in python so  to store in resultanat arraay in python, so we return list,     
 def RDP(points, epsilon):
 
     
@@ -36,7 +36,7 @@ def RDP(points, epsilon):
     
     #perpendicular shortest distance to the line between start and end 
     for i in range(1,end):
-        #points[start][0] <- extra 0 added beacuse the input is [[[1,2],[3,4]]] form
+       
         dist=point_line_distance(points[start],points[end],points[i])
         
         if(dist>maxDist):
